@@ -1,0 +1,173 @@
+body{
+    margin:50px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.header{
+    text-align:center;
+    margin-top:75px;
+}
+
+.header h2{
+    margin:0;
+    font-weight:500;
+}
+.profile{
+    height:150px;
+    width:150px;
+    border-radius:75px;
+}
+.name{
+    font-size:35px;
+    margin-top:10px;
+}
+
+.nav {
+    text-align:center;
+}
+.nav p{
+    list-style-type: none;
+    padding:0;
+    margin-top:0;
+    color:bfbfbf;
+}
+
+.active, .nav span:hover{
+    color:000;
+}
+
+.nav p{
+    font-size:20px;
+    font-weight:600;
+}
+
+.nav p:hover{
+    cursor: pointer;
+}
+.nav #nav-about{
+    margin-right:30px;
+}
+
+.nav #nav-projects{
+    margin-right:30px;
+}
+
+.nav #nav-github{
+    margin-left:30px;
+}
+
+.info img{
+    height:325px;
+    width:325px;
+}
+
+.info .topshelf{
+    font-weight:bold;
+}
+.about{
+    text-align:center;
+    margin-top:55px;
+    font-size:30px;
+}
+.projects{
+    display:none;
+}
+
+.projects .topshelf{
+    text-align:center;
+    margin-top:55px;
+    font-size:30px;
+}
+
+.projects img{
+    margin-top:40px;
+    width:100%;
+}
+
+.projects img:hover{
+    transform:scale(1.1);
+}
+
+.projects #protege .row{
+    border-style:1px solid 000;
+}
+
+.projects #gba img{
+    width:100%;
+}
+.resume{
+    display:none;
+    text-align:center;
+    margin-top:55px;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.resume a:hover{
+    color:000;
+    text-decoration:none;
+
+}
+
+.resume a{
+    color:000;
+}
+.resume a:visited{
+    color:000;
+}
+
+
+.github{
+    display:none;
+    text-align:center;
+    margin-top:55px;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.github a{
+    color:000;
+}
+.github a:hover{
+    color:000;
+    text-decoration:none;
+}
+
+.github a:visited{
+    color:000;
+}
+.github 
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+  color:000;
+}
+
+.active, .dot:active{
+    background-color: #fff;
+    color:000;
+}

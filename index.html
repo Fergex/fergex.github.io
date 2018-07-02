@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Christian Ferguson</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Kanit:100" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class = "header">
+            <img src="imgs/profile.jpg" class="profile">
+            <h2 class = "name">Christian Ferguson</h2>
+        </div>
+
+        <!--List-->
+        <div class="nav">
+            <p id ="toggle">
+                <span id="nav-about" class="press">About</span>
+                <span id="nav-projects" class="press">Projects</span>
+                <span id="nav-resume" class="press">Resume</span>
+                <span id="nav-github" class="press">GitHub</span>
+            </p>
+        </div>
+
+        <!--Info-->
+        <div class="info">
+            <!--About-->
+            <div class="about">
+                <div class="col-lg-4 col-sm-12">
+                    <p class="topshelf">--SKILLS--</p>
+                    <p>-&nbsp&nbspC++&nbsp&nbsp-</p>
+                    <p>-&nbsp&nbspHTML&nbsp&nbsp-</p>
+                    <p>-&nbsp&nbspCSS&nbsp&nbsp-</p>
+                    <p>-&nbsp&nbspBootstrap&nbsp&nbsp-</p>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <p class="topshelf">--CURRENT LIFE--</p>
+                    <p>-&nbsp&nbspCape Girardeau, MO&nbsp&nbsp-</p>
+                    <p>-&nbsp&nbspUnderGrad CS Major&nbsp&nbsp-</p>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                     <p class="topshelf">--LEARNING--</p>
+                     <p>-&nbsp&nbspFrontEnd&nbsp&nbsp-</p>
+                     <p>-&nbsp&nbspC#&nbsp&nbsp-</p>
+                </div>
+            </div>
+
+            <!--Projects-->    
+            <div class="projects">
+                <div id = "protege" class="row">
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="slideshow-container">
+                            <p class="topshelf">--PROTEGE--</p>
+                            <div class="mySlides">
+                                <a href="projects/Protege/ProtegeTitleScreen1.png"><img src="projects/Protege/ProtegeTitleScreen0.png"></a>
+                            </div>
+                            <div class="mySlides">
+                                <a href="projects/Protege/ProtegeGUIConcept1.png"><img src="projects/Protege/ProtegeGUIConcept0.png"></a>
+                            </div>
+                        </div>
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
+                        </div>
+                    </div>
+                    <div id = "gba">
+                        <div class="col-lg-4 col-sm-12">
+                            <p class="topshelf">--GROOMED BY ALYSHA--</p>
+                            <a href="http://www.groomedbyalysha.com" target="_blank"><img src="projects/GBA/Groomed by Alysha_0.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Resume-->
+            <div class="resume">
+                <p><a href="projects/resume/resume.pdf">--RESUME--</a></p>
+            </div>
+    
+             <!--Github-->
+            <div class="github">
+                 <p><a href="https://github.com/Fergex" target="blank">--HTTPS://GITHUB.COM/FERGEX--</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        $('#toggle > span').click(function() {
+        var ix = $(this).index();
+
+        $('.about').toggle( ix === 0 );
+        $('.projects').toggle( ix === 1 );
+        $('.resume').toggle( ix === 2 );
+        $('.github').toggle( ix === 3 );
+    });
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+
+        var header = document.getElementById("toggle");
+        var btns = header.getElementsByClassName("press");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+        });
+    }
+    </script>
+</body>
+</html>
